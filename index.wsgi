@@ -1,1 +1,6 @@
-print('Hello, world!')
+def application(environ, start_response):
+	body = b'hello world!\n'
+	status = '200 OK'
+	headers = [('Content-type' , 'text/plain')]
+	start_response(status, headers)
+	return [body]
